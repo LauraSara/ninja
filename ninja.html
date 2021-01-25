@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>hola</h1>
+  <script>
+    class Ninja{
+      constructor(nombre, salud, velocidad=3, fuerza=3){
+        this.nombre = nombre;
+        this.salud = salud;
+        this.velocidad = velocidad;
+        this.fuerza = fuerza;
+      
+      }
+
+      sayName(){
+        console.log(`Nombre: ${this.nombre}`);
+      }
+
+      showStats (){
+        console.log(this.nombre ,this.fuerza, this.velocidad, this.salud);
+
+        console.log(`Nombre: ${this.nombre}
+                  Salud: ${this.salud}
+                  velocidad: ${this.velocidad}
+                  fuerza: ${this.fuerza}`);
+      }
+
+      drinkSake (){
+        this.salud += 10;
+      }
+    }
+
+    const ninja1 = new Ninja("Konfupanda",10,5,2);
+    ninja1.sayName();
+    ninja1.showStats();
+    ninja1.drinkSake();
+    ninja1.showStats();
+
+    const ninja2 = new Ninja("Mulan", 15)
+
+  </script>
+</body>
+</html>
