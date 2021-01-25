@@ -43,6 +43,21 @@
 
     const ninja2 = new Ninja("Mulan", 15)
 
+    class Sensei extends Ninja{
+      constructor(nombre, salud=200, velocidad=10, fuerza=10,sabiduria=10){
+        super(nombre,salud,velocidad,fuerza)
+        this.sabiduria=sabiduria
+
+      }
+      speakWisdom() {
+        super.drinkSake();
+        console.log("esto es un ejemplo de super");
+      }
+    }
+
+    const sensei1= new Sensei("Bob");
+    sensei1.speakWisdom();
+
   </script>
 </body>
 </html>
